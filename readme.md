@@ -1,1 +1,0 @@
-Skill para documentar proyectos

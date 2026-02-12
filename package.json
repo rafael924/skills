@@ -1,0 +1,22 @@
+{
+  "name": "copilot-skills",
+  "version": "1.0.0",
+  "description": "Colección personal de skills para GitHub Copilot",
+  "author": "rafael924",
+  "license": "MIT",
+  "scripts": {
+    "generate-snippets": "node scripts/generate-snippets.js",
+    "install-snippets": "node scripts/generate-snippets.js && node scripts/install-snippets.js"
+  },
+  "keywords": [
+    "github-copilot",
+    "skills",
+    "documentation",
+    "automation",
+    "productivity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafael924/skills.git"
+  }
+}

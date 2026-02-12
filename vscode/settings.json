@@ -1,0 +1,21 @@
+{
+  "files.associations": {
+    "*.skill.md": "markdown",
+    "copilot-skills.code-snippets": "jsonc"
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "markdown.preview.breaks": true,
+  "markdown.preview.fontSize": 14,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  }
+}
