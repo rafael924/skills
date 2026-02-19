@@ -1,16 +1,20 @@
 # SKILL: Autonomous Project Documentation Generator
 
 ## 📋 Metadata
-- **Versión**: 1.0.0
+- **Versión**: 1.1.0
 - **Autor**: rafael924
 - **Fecha Creación**: 2026-02-12
-- **Última Actualización**: 2026-02-12
+- **Última Actualización**: 2026-02-19
 - **Entorno Óptimo**: GitHub.com (análisis completo) / VS Code (requiere más intervención)
 - **Lenguajes Aplicables**: Todos
 - **Categoría**: Documentation
 
 ## 🎯 Propósito
-Analizar de forma exhaustiva y autónoma un repositorio local completo, comprender su funcionamiento en profundidad, y generar documentación HTML/CSS/JS interactiva y completa, requiriendo mínima intervención del usuario.
+Analizar de forma exhaustiva y autónoma un repositorio local completo, comprender su funcionamiento en profundidad, y generar documentación en dos modalidades:
+- **Completa**: HTML/CSS/JS interactivo y exhaustivo.
+- **Simple**: Un único pantallazo conciso con toda la información esencial.
+
+---
 
 ## 🔧 Cuándo Usar
 - Necesitas documentar un proyecto existente sin documentación
@@ -21,13 +25,18 @@ Analizar de forma exhaustiva y autónoma un repositorio local completo, comprend
 
 ## 📥 Input Esperado
 - Acceso al repositorio completo (ideal en GitHub.com)
-- Comando de activación: "Documenta este proyecto" o variaciones
-- (Opcional) Observaciones específicas del usuario tras revisar el plan
+- Comando de activación: ver sección **🔑 ACTIVACIÓN DEL SKILL**
+- (Opcional) Observaciones específicas del usuario
 
 ## 📤 Output Generado
+
+### Modo Completo
 - `project-documentation.html` - Documentación completa navegable por tabs
 - `documentation-styles.css` - Estilos profesionales responsive
-- `documentation-script.js` - Funcionalidades interactivas (navegación, copy-to-clipboard, etc.)
+- `documentation-script.js` - Funcionalidades interactivas
+
+### Modo Simple
+- `project-overview.html` - Una sola página con pantallazo general del proyecto
 
 ---
 
@@ -88,54 +97,19 @@ Cuando el usuario solicite documentar su proyecto, DEBES realizar un análisis c
 Una vez completado el análisis profundo, presenta al usuario un plan estructurado:
 
 ```
-# 📊 Plan de Documentación - [Nombre del Proyecto Detectado]
+📊 Plan de Documentación - [Nombre del Proyecto Detectado]
 
-## Análisis Completado ✅
+Análisis Completado ✅
 
-**Tipo de Proyecto:** [Web App / API REST / Librería / etc.]
-**Tecnologías Principales:** [React, Node.js, PostgreSQL, etc.]
-**Arquitectura:** [Monolito / Microservicios / MVC / etc.]
+Tipo de Proyecto: [Web App / API REST / Librería / etc.]
+Tecnologías Principales: [React, Node.js, PostgreSQL, etc.]
+Arquitectura: [Monolito / Microservicios / MVC / etc.]
 
-## Estructura de Documentación Propuesta
+Estructura de Documentación Propuesta
 
-### 🌐 Vista General
-- Descripción del proyecto y propósito
-- Objetivos y alcance
-- Contexto de negocio
-- Audiencia objetivo
+[General] [Arquitectura] [Técnica] [Implementación] [Despliegue] [Testing]
 
-### 🏗️ Vista de Arquitectura
-- Diagrama de arquitectura general
-- Estructura de carpetas explicada
-- Flujo de datos principal
-- Componentes/módulos principales
-
-### 🔧 Vista Técnica
-- Stack tecnológico completo
-- Dependencias críticas
-- Patrones de diseño utilizados
-- APIs y endpoints (si aplica)
-
-### 💻 Vista de Implementación
-- Estructura de código detallada
-- Componentes/clases principales
-- Lógica de negocio core
-- Convenciones de código
-
-### 🚀 Vista de Despliegue
-- Requisitos del sistema
-- Instalación paso a paso
-- Variables de entorno
-- Scripts disponibles
-- Troubleshooting común
-
-### 🧪 Vista de Testing (si aplica)
-- Estrategia de testing
-- Cómo ejecutar tests
-- Cobertura actual
-
-## ¿Apruebas este plan?
-
+¿Apruebas este plan?
 Responde con:
 - ✅ "Aprobado" o "Sí" para continuar
 - 📝 Cualquier observación o sección adicional que quieras agregar (opcional)
@@ -145,10 +119,13 @@ Responde con:
 
 ### FASE 3: Generación de Documentación 🎨
 
-Una vez aprobado el plan, genera **inmediatamente** los 3 archivos completos:
+Una vez aprobado el plan, genera los archivos según el **modo de activación**:
 
-#### Archivo 1: project-documentation.html
+---
 
+#### 📄 MODO COMPLETO — 3 archivos
+
+##### Archivo 1: project-documentation.html
 **Requisitos:**
 - Estructura HTML5 semántica
 - Sistema de navegación por tabs/pestañas
@@ -169,34 +146,60 @@ Una vez aprobado el plan, genera **inmediatamente** los 3 archivos completos:
 [General] [Arquitectura] [Técnica] [Implementación] [Despliegue] [Testing]
 ```
 
-#### Archivo 2: documentation-styles.css
-
+##### Archivo 2: documentation-styles.css
 **Requisitos:**
 - Diseño minimalista pero profesional
 - Paleta de colores moderna (tonos azules/grises corporativos)
-- Tipografía legible (Google Fonts o sistema)
+- Tipografía legible
 - Responsive design (mobile-first)
-- Componentes:
-  - Cards para secciones
-  - Badges para tecnologías
-  - Syntax highlighting visual para código
-  - Tablas estilizadas
-  - Iconos/emojis para jerarquía
-- Modo claro (prioritario)
+- Componentes: Cards, Badges, Syntax highlighting, Tablas, Iconos
 - Animaciones suaves
 - Print-friendly styles
 
-#### Archivo 3: documentation-script.js
-
+##### Archivo 3: documentation-script.js
 **Funcionalidades:**
 - Sistema de navegación entre tabs
 - Estado activo de tab actual
 - Smooth scrolling
 - Copiado de bloques de código con un click
-- Búsqueda/filtrado (si hay mucho contenido)
+- Búsqueda/filtrado
 - Collapsible sections
 - Tabla de contenidos dinámica
 - Funcionalidad de exportación/impresión
+
+---
+
+#### ⚡ MODO SIMPLE — 1 archivo
+
+##### Archivo único: project-overview.html
+
+**Objetivo:** Una sola página HTML autocontenida (sin CSS ni JS externos) que muestre todo lo esencial en un pantallazo. Sin tabs, sin navegación compleja. Scroll simple de arriba hacia abajo.
+
+**Secciones obligatorias (en este orden):**
+
+1. **Header** — Nombre del proyecto + descripción en 1-2 líneas + badges de tecnologías
+2. **¿Qué hace?** — Propósito del proyecto en máximo 3 bullets
+3. **Stack** — Tabla simple: Tecnología | Versión | Rol
+4. **Estructura** — Árbol de carpetas con una línea de descripción por carpeta/archivo clave
+5. **Cómo correrlo** — Solo los comandos esenciales (install + run)
+6. **Scripts disponibles** — Tabla: Comando | Descripción
+7. **Variables de entorno** — Tabla: Variable | Descripción | Ejemplo (si existen)
+8. **Flujo principal** — Diagrama ASCII del flujo de datos o arquitectura en máximo 10 líneas
+
+**Requisitos de diseño:**
+- CSS inline (todo en el mismo archivo HTML)
+- Fondo blanco, tipografía sans-serif del sistema
+- Color de acento: `#0070f3` (azul)
+- Máximo 600px de ancho centrado
+- No más de 200 líneas de HTML total
+- Sin animaciones, sin tabs, sin interactividad compleja
+- Debe poder imprimirse bien tal como está
+
+**Formato de entrega:**
+```html
+<!-- name=project-overview.html -->
+[CÓDIGO COMPLETO — UN SOLO ARCHIVO]
+```
 
 ---
 
@@ -218,25 +221,9 @@ Una vez aprobado el plan, genera **inmediatamente** los 3 archivos completos:
 - Incluir comandos exactos encontrados en scripts
 
 ### Completitud
-- Los 3 archivos deben ser 100% funcionales
-- HTML debe abrirse directamente en navegador sin servidor
-- CSS y JS completamente implementados (no stubs)
+- Modo completo: Los 3 archivos deben ser 100% funcionales
+- Modo simple: El archivo debe ser autocontenido y abrir directamente en navegador
 - Sin "TODO" ni placeholders vacíos
-
-### Formato de Entrega
-Presentar archivos como bloques de código completos:
-
-```html name=project-documentation.html
-[CÓDIGO COMPLETO]
-```
-
-```css name=documentation-styles.css
-[CÓDIGO COMPLETO]
-```
-
-```javascript name=documentation-script.js
-[CÓDIGO COMPLETO]
-```
 
 ---
 
@@ -244,71 +231,61 @@ Presentar archivos como bloques de código completos:
 
 ### Usuario dice:
 ```
-"Documenta este proyecto"
+"Documenta este proyecto"           → Modo completo (3 archivos)
+"Documenta de forma simple"         → Modo simple (1 archivo)
+"Dame un pantallazo del proyecto"   → Modo simple (1 archivo)
 ```
 
 ### El agente:
 
-**1. Analiza silenciosamente:**
-- Lee todos los archivos del repositorio
-- Comprende la arquitectura
-- Identifica tecnologías y patrones
+**1. Analiza silenciosamente** todos los archivos del repositorio
 
-**2. Presenta el plan:**
-```
-📊 Plan de Documentación - E-Commerce API
+**2. Presenta el plan** con el análisis completado
 
-Análisis Completado ✅
-Tipo: API REST
-Tecnologías: Node.js, Express, PostgreSQL, JWT
-Arquitectura: MVC con capas de servicio
+**3. Usuario aprueba** (o agrega observaciones)
 
-[... plan detallado ...]
-
-¿Apruebas este plan?
-```
-
-**3. Usuario responde:**
-```
-"Aprobado. Agrega que usamos Stripe para pagos"
-```
-
-**4. Agente genera inmediatamente:**
-- `project-documentation.html` (completo + mención de Stripe)
-- `documentation-styles.css` (completo y funcional)
-- `documentation-script.js` (completo y funcional)
+**4. Agente genera** los archivos según el modo activado
 
 ---
 
 ## 🎯 CAPACIDADES ESPERADAS DEL AGENTE
 
 Para funcionamiento óptimo, el agente debe:
-
 - ✅ Tener acceso completo al repositorio
 - ✅ Poder leer múltiples archivos simultáneamente
 - ✅ Analizar código en diferentes lenguajes
 - ✅ Inferir relaciones entre archivos
-- ✅ Generar contenido extenso (3 archivos completos)
+- ✅ Generar contenido extenso (modo completo) o conciso (modo simple)
 - ✅ Mantener contexto del análisis durante la generación
 
 ---
 
 ## 🔑 ACTIVACIÓN DEL SKILL
 
-Este skill se activa cuando el usuario diga:
-
+### Modo Completo (3 archivos HTML+CSS+JS)
 - "Documenta este proyecto"
 - "Genera la documentación"
 - "Crea docs para este repo"
 - "Documenta el código"
-- O variaciones similares
+
+### Modo Simple (1 archivo, pantallazo general)
+- "Documenta de forma simple"
+- "Dame un pantallazo del proyecto"
+- "Documentación rápida"
+- "Resumen del proyecto"
+- "Overview del proyecto"
 
 ---
 
 ## 🔄 Changelog
 
+### v1.1.0 (2026-02-19)
+- ✨ Nuevo modo **Simple**: genera `project-overview.html` en un solo archivo autocontenido
+- 📝 Secciones definidas: header, stack, estructura, comandos, scripts, env vars, flujo ASCII
+- 🎯 Activación diferenciada por frase del usuario
+
 ### v1.0.0 (2026-02-12)
 - ✨ Versión inicial del skill
 - 📝 Soporte para análisis exhaustivo de repositorios
 - 🎨 Generación de documentación HTML/CSS/JS completa
-- 🔍 Análisis en 7 dimensiones (estructura, tecnología, arquitectura, funcionalidad, despliegue, código, docs existente)
+- 🔍 Análisis en 7 dimensiones
